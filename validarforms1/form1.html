@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Validando1</title>
+<script language = "javascript" type="text/javascript">
+function validar() {
+var nome = document.getElementById('nome').value;
+var email = document.getElementById('email').value;
+var senha = document.getElementById('senha').value;
+var rep_senha = document.getElementById('rep_senha').value;
+
+if (nome == "") {
+alert('Preencha o campo com seu nome');
+document.getElementById('nome').focus();
+return false;
+ }
+ 
+else if (nome.length < 5) {
+alert('Digite seu nome completo');
+document.getElementById('nome').focus();
+return false;
+  
+ }
+ 
+ else if (email == "") {
+ alert('Preencha o campo email');
+ document.getElementById('email').focus();
+ return false;
+}
+else if (senha == "") {
+ alert('Preencha o campo senha');
+ document.getElementById('senha').focus();
+ return false;
+}
+else if (rep_senha == "") {
+ alert('Preencha o campo de repetir senha');
+ document.getElementById('rep_senha').focus();
+ return false;
+ }
+ else if (senha != rep_senha) {
+ alert('Senhas diferentes');
+ form1.senha.focus();
+ return false;
+ }
+ }
+</script>
+</head>
+<body>
+<form id="form1" action="pagina2.html" method="post">
+Nome : <input id="nome" type="text"> <br /><br />
+Email : <input id="email" type="text"><br /><br />
+Senha : <input id="senha" type="password"><br /><br />
+Repetir a Senha : <input id="rep_senha" type="password"><br /><br />
+<input type="submit" onClick="return validar()">
+</form>
+</body>
+</html>

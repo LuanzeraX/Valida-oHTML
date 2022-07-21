@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<title> Eventos de Teclado</title>
+	<script type="text/javascript">
+	function exibir(){
+		var numero = window.event.keyCode;
+		window.alert("o código da tecla pressionada é: " + numero);
+		document.frmteste.txtnome.focus();
+		
+		}
+		function posi(){
+			document.frmteste.txtnome.focus();
+			}
+		
+		</script>
+		
+		</head>
+		<body onLoad="posi()">
+			<form name="frmteste">
+			<input type="text" name="txtnome" onKeypress="exibir()">
+			</form>
+		</body>
+		</html>

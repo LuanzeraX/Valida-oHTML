@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Como validar um Formulário dinamicamente com jQuery</title>
+<script type="text/javascript" src="jquery-1.11.3.min.js" ></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("input").blur(function(){
+	if($(this).val() == "")
+		{
+			$(this).css({"border-color" : "#F00" , "padding" : "2px"});
+		}
+	});
+})
+</script>
+</head>
+<body>
+<form id="form" name="form" method="post">
+	<p style="display:inline-table; width:70px;">Nome:</p>
+		<input type="text" id="nome" value="" />
+		<br /><br />
+		<p style="display:inline-table; width:70px;">Email:</p>
+		<input type="text" id="email" value="" />
+		<br /><br />
+		<p style="display:inline-table; width:70px;">Telefone:</p>
+		<input type="text" id="telefone" value="" />
+		<br /><br />
+		<input type="button" id="botao" value="enviar" />
+		</form>
+		</body>
+		</html>
